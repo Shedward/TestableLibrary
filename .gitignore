@@ -78,3 +78,7 @@ build
 # CMake 
 
 CMakeLists.txt.user
+
+# Sublime Text 
+
+*.sublime-workspace

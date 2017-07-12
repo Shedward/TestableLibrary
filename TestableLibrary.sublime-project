@@ -1,0 +1,52 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
+			"name": "TestableLibrary (OSX)",
+			"shell_cmd": "make -j8",
+			"syntax": "Packages/CMakeBuilder/Syntax/Make.sublime-syntax",
+			"variants":
+			[
+				{
+					"name": "clean",
+					"shell_cmd": "make -j8 clean"
+				},
+				{
+					"name": "rebuild_cache",
+					"shell_cmd": "make -j8 rebuild_cache"
+				},
+				{
+					"name": "test",
+					"shell_cmd": "make -j8 test"
+				},
+				{
+					"name": "Library",
+					"shell_cmd": "make -j8 Library"
+				},
+				{
+					"name": "multiplier_tests",
+					"shell_cmd": "make -j8 multiplier_tests"
+				},
+				{
+					"name": "common_tests",
+					"shell_cmd": "make -j8 common_tests"
+				}
+			],
+			"working_dir": "${project_path}/build"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"cmake":
+		{
+			"build_folder": "${project_path}/build"
+		}
+	}
+}

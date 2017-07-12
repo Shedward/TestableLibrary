@@ -15,10 +15,10 @@ TEST(Multiplier, SmallMultiplication) {
     ASSERT_EQ(multiplier.multiply(1.0), 1e-6);
 }
 
-TEST(Multiplier, FailingTest) {
+TEST(Multiplier, Zero) {
     auto multiplier = Multiplier(0.0);
 
-    ASSERT_EQ(multiplier.multiply(100.0), 100.0);
+    ASSERT_EQ(multiplier.multiply(100.0), 0.0);
 }
 
 int main(int argc, char **argv) {
